@@ -1,3 +1,5 @@
+package BenimOyun;
+
 class OyunDemo{
 	public static int tahtaBoyut = 5;
 	public static char oyuncu1Karakter = 'X';
@@ -26,7 +28,15 @@ class OyunDemo{
 			System.out.println("--------");	
 		}
 		game.kazananKim();
-		System.out.println("Kazanan oyuncu: " + ((game.oyuncu1Count > game.oyuncu2Count) ? "1":"2"));
+		String kazanan = "";
+		if (game.oyuncu1Count > game.oyuncu2Count) {
+			kazanan = "1";
+		} else if (game.oyuncu2Count > game.oyuncu1Count) {
+			kazanan = "2";
+		} else {
+			kazanan = "Berabere";
+		}
+		System.out.println("Kazanan oyuncu: " + kazanan);
 	}
 
 }
